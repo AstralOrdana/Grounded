@@ -1,1 +1,1 @@
-# Template mod codebase for creating multiloader mods
+# Immersive Soils codebase for creating multiloader mods

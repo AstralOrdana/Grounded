@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "immersive_soils:loamy_farmland",
+    "immersive_soils:sandy_farmland",
+    "immersive_soils:silty_farmland",
+    "immersive_soils:earthen_clay_farmland"
+  ]
+}

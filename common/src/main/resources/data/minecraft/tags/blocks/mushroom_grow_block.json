@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "immersive_soils:mulch_block",
+    "immersive_soils:nulch_block"
+  ]
+}

@@ -1,34 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "template_mod",
+  "id": "immersive_soils",
   "version": "${version}",
-  "name": "Template Mod",
-  "description": "Template Mod Description",
+  "name": "Immersive Soils",
+  "description": "Immersive Soils Description",
   "authors": [
     "Ordana"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/template_mod",
-    "sources": "https://github.com/AstralOrdana/template_mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/immersive_soils",
+    "sources": "https://github.com/AstralOrdana/immersive_soils"
   },
   "license": "LGPLv3",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.ordana.template_mod.fabric.TemplateModFabric"
-    ],
-    "modmenu": [
-      "com.ordana.template_mod.integration.fabric.ModMenuCompat"
+      "com.ordana.immersive_soils.fabric.ImmersiveSoilsFabric"
     ]
   },
   "mixins": [
-    "template_mod.mixins.json",
-    "template_mod-common.mixins.json"
+    "immersive_soils.mixins.json",
+    "immersive_soils-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.19.2",
-    "moonlight": ">=1.19.2-2.0.35"
+    "moonlight": ">=1.20-2.7.0",
+    "minecraft": ">=1.20.1"
   }
 }

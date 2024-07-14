@@ -1,0 +1,10 @@
+{
+    "parent": "immersive_soils:block/grassy_block",
+    "textures": {
+        "particle": "immersive_soils:block/sandy_dirt",
+        "top": "minecraft:block/grass_block_top",
+        "bottom": "immersive_soils:block/sandy_dirt",
+        "side": "immersive_soils:block/grassy_sandy_dirt_side",
+        "side_overlay": "immersive_soils:block/grassy_sandy_dirt_overlay"
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "immersive_soils:block/loam"
+      },
+      {
+        "model": "immersive_soils:block/loam",
+        "y": 90
+      },
+      {
+        "model": "immersive_soils:block/loam",
+        "y": 180
+      },
+      {
+        "model": "immersive_soils:block/loam",
+        "y": 270
+      }
+    ]
+  }
+}

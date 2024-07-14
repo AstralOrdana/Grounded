@@ -1,5 +1,10 @@
 {
   "replace": false,
   "values": [
+    "immersive_soils:earthen_clay",
+    "immersive_soils:permafrost",
+    "immersive_soils:grassy_earthen_clay",
+    "immersive_soils:grassy_permafrost",
+    "immersive_soils:earthen_clay_farmland"
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": [
+      { "model": "immersive_soils:block/mulch_block" }
+    ],
+    "waterlogged=true": [
+      { "model": "immersive_soils:block/mulch_block_soaked" }
+    ]
+  }
+}

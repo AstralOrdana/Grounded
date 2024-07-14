@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "immersive_soils:block/sandy_dirt"
+      },
+      {
+        "model": "immersive_soils:block/sandy_dirt",
+        "y": 90
+      },
+      {
+        "model": "immersive_soils:block/sandy_dirt",
+        "y": 180
+      },
+      {
+        "model": "immersive_soils:block/sandy_dirt",
+        "y": 270
+      }
+    ]
+  }
+}

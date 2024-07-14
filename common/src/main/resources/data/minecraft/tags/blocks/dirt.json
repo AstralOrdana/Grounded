@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "immersive_soils:mulch_block",
+    "immersive_soils:rooted_grass_block",
+    "immersive_soils:loam",
+    "immersive_soils:silt",
+    "immersive_soils:earthen_clay",
+    "immersive_soils:sandy_dirt",
+    "immersive_soils:permafrost",
+
+    "immersive_soils:grassy_silt",
+    "immersive_soils:grassy_earthen_clay",
+    "immersive_soils:grassy_sandy_dirt",
+    "immersive_soils:grassy_permafrost"
+  ]
+}

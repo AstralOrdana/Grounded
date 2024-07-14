@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C#",
+    "#C"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:mud"
+    },
+    "C": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "result": {
+    "item": "immersive_soils:nulch_block",
+    "count": 4
+  }
+}

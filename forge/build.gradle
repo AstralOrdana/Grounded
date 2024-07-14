@@ -15,8 +15,8 @@ loom {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
-        mixinConfig  "template_mod-common.mixins.json"
-        mixinConfig  "template_mod.mixins.json"
+        mixinConfig  "immersive_soils-common.mixins.json"
+        mixinConfig  "immersive_soils.mixins.json"
     }
 }
 
@@ -115,8 +115,6 @@ dependencies {
 
     implementation 'org.jetbrains:annotations:22.0.0'
 
-    modImplementation("curse.maven:selene-499980:4806893")
+    modImplementation("curse.maven:selene-499980:5478857")
 
-    implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
-    implementation(include("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}"))
 }
