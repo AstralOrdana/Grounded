@@ -28,5 +28,5 @@ public class ModTags {
     public static final TagKey<Biome> HAS_SANDY_DIRT = registerBiomeTag("has_sandy_dirt");
     public static final TagKey<Biome> HAS_EARTHEN_CLAY = registerBiomeTag("has_earthen_clay");
     public static final TagKey<Biome> HAS_PERMAFROST = registerBiomeTag("has_permafrost");
-    public static final TagKey<Biome> HAS_LAKEBED = registerBiomeTag("has_permafrost");
+    public static final TagKey<Biome> HAS_LAKEBED = registerBiomeTag("has_lakebed");
 }

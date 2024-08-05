@@ -6,7 +6,8 @@
     "bottom": "immersive_soils:block/earthen_clay_bottom"
   },
   "elements": [
-    {   "from": [ 0, 0, 0 ],
+    {
+      "from": [ 0, 0, 0 ],
       "to": [ 16, 15, 16 ],
       "faces": {
         "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "cullface": "down" },

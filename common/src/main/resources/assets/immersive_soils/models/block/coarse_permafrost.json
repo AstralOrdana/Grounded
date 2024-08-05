@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "immersive_soils:block/rooted_sandy_dirt"
+    "all": "immersive_soils:block/coarse_permafrost"
   }
 }

@@ -12,9 +12,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class SiltBlock extends Block {
@@ -25,11 +27,15 @@ public class SiltBlock extends Block {
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
-        if (item instanceof HoeItem) {
-            level.playSound(player, pos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0f, 1.0f);
+        var coarse = state.getBlock() == ModBlocks.COARSE_SILT.get();
+        var tool = 0;
+        if (item instanceof ShovelItem) tool = 1;
+        if (item instanceof HoeItem) tool = 2;
+        if (tool > 0) {
+            level.playSound(player, pos, tool == 1 ? SoundEvents.SHOVEL_FLATTEN : SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0f, 1.0f);
             stack.hurtAndBreak(1, player, (l) -> l.broadcastBreakEvent(hand));
             if (player instanceof ServerPlayer) {
-                level.setBlockAndUpdate(pos, ModBlocks.SILTY_FARMLAND.get().withPropertiesOf(state));
+                level.setBlockAndUpdate(pos, tool == 1 ? ModBlocks.SILT_PATH.get().defaultBlockState() : coarse ? ModBlocks.SILT.get().defaultBlockState() : ModBlocks.SILTY_FARMLAND.get().defaultBlockState());
                 player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
             }
             return InteractionResult.sidedSuccess(level.isClientSide);

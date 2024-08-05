@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S",
+    "S#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gravel"
+    },
+    "S": {
+      "item": "immersive_soils:sandy_dirt"
+    }
+  },
+  "result": {
+    "item": "immersive_soils:coarse_sandy_dirt",
+    "count": 4
+  }
+}

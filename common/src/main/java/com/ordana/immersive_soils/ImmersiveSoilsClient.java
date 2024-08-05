@@ -18,7 +18,7 @@ public class ImmersiveSoilsClient {
     public static void setup() {
         ClientHelper.registerRenderType(ModBlocks.GRASSY_PERMAFROST.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.GRASSY_SILT.get(), RenderType.cutoutMipped());
-        ClientHelper.registerRenderType(ModBlocks.GRASSY_EARTHEN_CLAY.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.GRASSY_EARTHEN_CLAY.get(), RenderType.cutout());
         ClientHelper.registerRenderType(ModBlocks.GRASSY_SANDY_DIRT.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.ROOTED_GRASS_BLOCK.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.HANGING_ROOTS_WALL.get(), RenderType.cutoutMipped());

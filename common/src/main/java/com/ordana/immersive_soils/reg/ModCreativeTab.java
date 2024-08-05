@@ -32,6 +32,14 @@ public class ModCreativeTab {
                 ModBlocks.MULCH_BLOCK, ModBlocks.NULCH_BLOCK
         );
 
+        after(e, Items.DIRT_PATH, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.EARTHEN_CLAY_PATH, ModBlocks.SANDY_DIRT_PATH, ModBlocks.SILT_PATH, ModBlocks.PERMAFROST_PATH
+        );
+
+        after(e, Items.COARSE_DIRT, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.COARSE_EARTHEN_CLAY, ModBlocks.COARSE_SANDY_DIRT, ModBlocks.COARSE_SILT, ModBlocks.COARSE_PERMAFROST
+        );
+
     }
 
     private static void after(RegHelper.ItemToTabEvent event, Item target,

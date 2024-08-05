@@ -1,0 +1,38 @@
+{
+  "variants": {
+    "waterlogged=false": [
+      {
+        "model": "immersive_soils:block/earthen_clay_path"
+      },
+      {
+        "model": "immersive_soils:block/earthen_clay_path",
+        "y": 90
+      },
+      {
+        "model": "immersive_soils:block/earthen_clay_path",
+        "y": 180
+      },
+      {
+        "model": "immersive_soils:block/earthen_clay_path",
+        "y": 270
+      }
+    ],
+    "waterlogged=true": [
+      {
+        "model": "immersive_soils:block/earthen_clay_path_soaked"
+      },
+      {
+        "model": "immersive_soils:block/earthen_clay_path_soaked",
+        "y": 90
+      },
+      {
+        "model": "immersive_soils:block/earthen_clay_path_soaked",
+        "y": 180
+      },
+      {
+        "model": "immersive_soils:block/earthen_clay_path_soaked",
+        "y": 270
+      }
+    ]
+  }
+}
