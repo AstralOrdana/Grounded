@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "grounded:block/permafrost"
+    }
+  }
+}

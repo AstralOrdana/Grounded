@@ -1,0 +1,8 @@
+{
+    "parent": "grounded:block/grassy_snowy_block",
+    "textures": {
+        "particle": "grounded:block/earthen_clay_bottom",
+        "side": "grounded:block/grassy_earthen_clay_side",
+        "bottom": "grounded:block/earthen_clay_bottom"
+    }
+}

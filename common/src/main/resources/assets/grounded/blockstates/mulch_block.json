@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": [
+      { "model": "grounded:block/mulch_block" }
+    ],
+    "waterlogged=true": [
+      { "model": "grounded:block/mulch_block_soaked" }
+    ]
+  }
+}

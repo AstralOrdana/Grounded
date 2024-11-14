@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grounded:block/sandy_dirt"
+      },
+      {
+        "model": "grounded:block/sandy_dirt",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/sandy_dirt",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/sandy_dirt",
+        "y": 270
+      }
+    ]
+  }
+}

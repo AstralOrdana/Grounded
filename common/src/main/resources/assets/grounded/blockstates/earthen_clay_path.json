@@ -1,0 +1,38 @@
+{
+  "variants": {
+    "waterlogged=false": [
+      {
+        "model": "grounded:block/earthen_clay_path"
+      },
+      {
+        "model": "grounded:block/earthen_clay_path",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/earthen_clay_path",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/earthen_clay_path",
+        "y": 270
+      }
+    ],
+    "waterlogged=true": [
+      {
+        "model": "grounded:block/earthen_clay_path_soaked"
+      },
+      {
+        "model": "grounded:block/earthen_clay_path_soaked",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/earthen_clay_path_soaked",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/earthen_clay_path_soaked",
+        "y": 270
+      }
+    ]
+  }
+}

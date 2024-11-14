@@ -2,6 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:hanging_roots",
-    "immersive_soils:hanging_roots_wall"
+    "grounded:hanging_roots_wall"
   ]
 }

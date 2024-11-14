@@ -1,0 +1,8 @@
+{
+  "parent": "grounded:block/earthen_clay_farmland",
+  "textures": {
+    "dirt": "grounded:block/loam_side",
+    "top": "grounded:block/loamy_farmland_moist",
+    "bottom": "minecraft:block/dirt"
+  }
+}

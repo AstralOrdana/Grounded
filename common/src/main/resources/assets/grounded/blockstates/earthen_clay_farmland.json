@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "moisture=0": {
+      "model": "grounded:block/earthen_clay_farmland"
+    },
+    "moisture=1": {
+      "model": "grounded:block/earthen_clay_farmland"
+    },
+    "moisture=2": {
+      "model": "grounded:block/earthen_clay_farmland"
+    },
+    "moisture=3": {
+      "model": "grounded:block/earthen_clay_farmland"
+    },
+    "moisture=4": {
+      "model": "grounded:block/earthen_clay_farmland"
+    },
+    "moisture=5": {
+      "model": "grounded:block/earthen_clay_farmland"
+    },
+    "moisture=6": {
+      "model": "grounded:block/earthen_clay_farmland"
+    },
+    "moisture=7": {
+      "model": "grounded:block/earthen_clay_farmland_moist"
+    }
+  }
+}

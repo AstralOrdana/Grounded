@@ -1,24 +1,24 @@
 {
   "replace": false,
   "values": [
-    "immersive_soils:mulch_block",
-    "immersive_soils:nulch_block",
-    "immersive_soils:rooted_grass_block",
+    "grounded:mulch_block",
+    "grounded:nulch_block",
+    "grounded:rooted_grass_block",
 
-    "immersive_soils:earthen_clay",
-    "immersive_soils:permafrost",
-    "immersive_soils:silt",
-    "immersive_soils:loam",
-    "immersive_soils:sandy_dirt",
+    "grounded:earthen_clay",
+    "grounded:permafrost",
+    "grounded:silt",
+    "grounded:loam",
+    "grounded:sandy_dirt",
 
-    "immersive_soils:grassy_earthen_clay",
-    "immersive_soils:grassy_permafrost",
-    "immersive_soils:grassy_silt",
-    "immersive_soils:grassy_sandy_dirt",
+    "grounded:grassy_earthen_clay",
+    "grounded:grassy_permafrost",
+    "grounded:grassy_silt",
+    "grounded:grassy_sandy_dirt",
 
-    "immersive_soils:earthen_clay_farmland",
-    "immersive_soils:silty_farmland",
-    "immersive_soils:loamy_farmland",
-    "immersive_soils:sandy_farmland"
+    "grounded:earthen_clay_farmland",
+    "grounded:silty_farmland",
+    "grounded:loamy_farmland",
+    "grounded:sandy_farmland"
   ]
 }

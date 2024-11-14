@@ -1,0 +1,10 @@
+{
+    "parent": "grounded:block/grassy_block",
+    "textures": {
+        "particle": "grounded:block/silt",
+        "top": "minecraft:block/grass_block_top",
+        "bottom": "grounded:block/silt",
+        "side": "grounded:block/grassy_silt_side",
+        "side_overlay": "grounded:block/grassy_silt_overlay"
+    }
+}

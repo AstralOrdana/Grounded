@@ -1,8 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": [
-    "immersive_soils:silt_aquifer"
-  ],
-  "step": "raw_generation"
-}

@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "grounded:block/grassy_permafrost"
+      },
+      {
+        "model": "grounded:block/grassy_permafrost",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/grassy_permafrost",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/grassy_permafrost",
+        "y": 270
+      }
+    ],
+    "snowy=true": [
+      {
+        "model": "grounded:block/grassy_permafrost_snowy"
+      }
+    ]
+  }
+}

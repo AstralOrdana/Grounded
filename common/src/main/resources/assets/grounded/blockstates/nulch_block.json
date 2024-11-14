@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "molten=false": [
+      { "model": "grounded:block/nulch_block" }
+    ],
+    "molten=true": [
+      { "model": "grounded:block/nulch_block_molten" }
+    ]
+  }
+}

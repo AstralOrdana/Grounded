@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grounded:block/silt_path"
+      },
+      {
+        "model": "grounded:block/silt_path",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/silt_path",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/silt_path",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "variants": {
+    "waterlogged=false,snowy=false": [
+      {
+        "model": "grounded:block/grassy_earthen_clay"
+      },
+      {
+        "model": "grounded:block/grassy_earthen_clay",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/grassy_earthen_clay",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/grassy_earthen_clay",
+        "y": 270
+      }
+    ],
+    "waterlogged=true,snowy=false": [
+      {
+        "model": "grounded:block/grassy_earthen_clay_soaked"
+      },
+      {
+        "model": "grounded:block/grassy_earthen_clay_soaked",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/grassy_earthen_clay_soaked",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/grassy_earthen_clay_soaked",
+        "y": 270
+      }
+    ],
+    "waterlogged=false,snowy=true": [
+      {
+        "model": "grounded:block/grassy_earthen_clay_snowy"
+      }
+    ],
+    "waterlogged=true,snowy=true": [
+      {
+        "model": "grounded:block/grassy_earthen_clay_soaked_snowy"
+      }
+    ]
+  }
+}

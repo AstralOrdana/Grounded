@@ -1,8 +1,0 @@
-{
-    "parent": "immersive_soils:block/grassy_snowy_block",
-    "textures": {
-        "particle": "immersive_soils:block/sandy_dirt",
-        "side": "immersive_soils:block/sandy_dirt",
-        "bottom": "immersive_soils:block/sandy_dirt"
-    }
-}

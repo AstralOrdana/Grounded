@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "grounded:block/rooted_grass_block"
+      },
+      {
+        "model": "grounded:block/rooted_grass_block",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/rooted_grass_block",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/rooted_grass_block",
+        "y": 270
+      }
+    ],
+    "snowy=true": {
+      "model": "grounded:block/rooted_grass_block_snow"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "grounded:block/earthen_clay"
+    },
+    "waterlogged=true": {
+      "model": "grounded:block/earthen_clay_soaked"
+    }
+  }
+}

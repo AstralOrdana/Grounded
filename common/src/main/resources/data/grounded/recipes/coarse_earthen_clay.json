@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S",
+    "S#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gravel"
+    },
+    "S": {
+      "item": "grounded:earthen_clay"
+    }
+  },
+  "result": {
+    "item": "grounded:coarse_earthen_clay",
+    "count": 4
+  }
+}

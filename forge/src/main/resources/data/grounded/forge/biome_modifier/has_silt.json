@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#grounded:has_silt",
+  "features": [
+    "grounded:silt"
+  ],
+  "step": "raw_generation"
+}

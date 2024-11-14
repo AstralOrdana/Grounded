@@ -3,7 +3,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/immersive_soils.accesswidener")
+    accessWidenerPath = file("src/main/resources/grounded.accesswidener")
 }
 
 dependencies {

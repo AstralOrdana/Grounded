@@ -15,8 +15,8 @@ loom {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
-        mixinConfig  "immersive_soils-common.mixins.json"
-        mixinConfig  "immersive_soils.mixins.json"
+        mixinConfig  "grounded-common.mixins.json"
+        mixinConfig  "grounded.mixins.json"
     }
 }
 

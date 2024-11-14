@@ -1,8 +1,0 @@
-{
-  "parent": "immersive_soils:block/earthen_clay_farmland",
-  "textures": {
-    "dirt": "immersive_soils:block/loam_side",
-    "top": "immersive_soils:block/loamy_farmland_moist",
-    "bottom": "minecraft:block/dirt"
-  }
-}

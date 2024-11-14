@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grounded:block/silt"
+      },
+      {
+        "model": "grounded:block/silt",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/silt",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/silt",
+        "y": 270
+      }
+    ]
+  }
+}

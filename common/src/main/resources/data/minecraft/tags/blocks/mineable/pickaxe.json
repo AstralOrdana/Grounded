@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "immersive_soils:earthen_clay",
-    "immersive_soils:permafrost",
-    "immersive_soils:grassy_earthen_clay",
-    "immersive_soils:grassy_permafrost",
-    "immersive_soils:earthen_clay_farmland"
+    "grounded:earthen_clay",
+    "grounded:permafrost",
+    "grounded:grassy_earthen_clay",
+    "grounded:grassy_permafrost",
+    "grounded:earthen_clay_farmland"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "grounded:block/coarse_earthen_clay_top_soaked",
+    "bottom": "grounded:block/coarse_earthen_clay_bottom_soaked",
+    "side": "grounded:block/coarse_earthen_clay_side_soaked"
+  }
+}

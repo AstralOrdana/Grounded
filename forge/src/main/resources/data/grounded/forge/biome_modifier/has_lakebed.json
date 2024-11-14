@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#grounded:has_lakebed",
+  "features": [
+    "grounded:dry_lakebed",
+    "grounded:dry_lakebed_large"
+  ],
+  "step": "raw_generation"
+}

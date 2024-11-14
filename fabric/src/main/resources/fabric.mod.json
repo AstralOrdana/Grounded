@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "immersive_soils",
+  "id": "grounded",
   "version": "${version}",
-  "name": "Immersive Soils",
-  "description": "Immersive Soils Description",
+  "name": "Grounded",
+  "description": "Grounded Description",
   "authors": [
     "Ordana"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/immersive_soils",
-    "sources": "https://github.com/AstralOrdana/immersive_soils"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/grounded",
+    "sources": "https://github.com/AstralOrdana/grounded"
   },
   "license": "LGPLv3",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.ordana.immersive_soils.fabric.ImmersiveSoilsFabric"
+      "com.ordana.grounded.fabric.GroundedFabric"
     ]
   },
   "mixins": [
-    "immersive_soils.mixins.json",
-    "immersive_soils-common.mixins.json"
+    "grounded.mixins.json",
+    "grounded-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",

@@ -7,11 +7,11 @@ license="LGPLv3"
 
 [[mods]]
 
-modId="immersive_soils"
+modId="grounded"
 
 version = "${version}"
 
-displayName="Immersive Soils"
+displayName="Grounded"
 
 logoFile="icon.png" #optional
 
@@ -19,26 +19,26 @@ credits="Ordana" #optional
 
 authors="Ordana" #optional
 
-itemIcon="immersive_soils:template" #catalogue icon
+itemIcon="grounded:template" #catalogue icon
 description='''
-Immersive Soils Description
+Grounded Description
 '''
 
-[[dependencies.immersive_soils]]
+[[dependencies.grounded]]
     modId="forge"
     mandatory=true
     versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.immersive_soils]]
+[[dependencies.grounded]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20.1,1.21)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.immersive_soils]]
+[[dependencies.grounded]]
     modId="moonlight"
     mandatory=true
     versionRange="[1.20-2.7.0,]"

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "top": "immersive_soils:block/loam_top",
-    "bottom": "minecraft:block/dirt",
-    "side": "immersive_soils:block/loam_side"
-  }
-}

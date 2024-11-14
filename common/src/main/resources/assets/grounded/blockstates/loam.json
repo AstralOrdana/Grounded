@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grounded:block/loam"
+      },
+      {
+        "model": "grounded:block/loam",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/loam",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/loam",
+        "y": 270
+      }
+    ]
+  }
+}

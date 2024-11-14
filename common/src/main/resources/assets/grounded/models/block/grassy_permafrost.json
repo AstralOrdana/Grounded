@@ -1,0 +1,9 @@
+{
+    "parent": "grounded:block/grassy_block",
+    "textures": {
+        "particle": "grounded:block/permafrost",
+        "top": "minecraft:block/grass_block_top",
+        "bottom": "grounded:block/permafrost",
+        "side": "grounded:block/grassy_permafrost_side"
+    }
+}

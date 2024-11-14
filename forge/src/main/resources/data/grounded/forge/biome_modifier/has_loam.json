@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#grounded:has_loam",
+  "features": [
+    "grounded:loam"
+  ],
+  "step": "raw_generation"
+}
