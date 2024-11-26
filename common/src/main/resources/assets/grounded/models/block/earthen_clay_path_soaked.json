@@ -2,7 +2,7 @@
   "parent": "minecraft:block/template_farmland",
   "textures": {
     "dirt": "grounded:block/earthen_clay_path_side_soaked",
-    "top": "minecraft:block/dirt_path_top",
+    "top": "grounded:block/earthen_clay_path_top_soaked",
     "bottom": "grounded:block/earthen_clay_bottom_soaked"
   },
   "elements": [

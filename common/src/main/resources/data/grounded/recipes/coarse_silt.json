@@ -9,11 +9,11 @@
       "item": "minecraft:gravel"
     },
     "S": {
-      "item": "grounded:sandy_dirt"
+      "item": "grounded:silt"
     }
   },
   "result": {
-    "item": "grounded:coarse_sandy_dirt",
+    "item": "grounded:coarse_silt",
     "count": 4
   }
 }

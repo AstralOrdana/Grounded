@@ -21,7 +21,6 @@ public class ModCreativeTab {
         );
 
         after(e, Items.ROOTED_DIRT, CreativeModeTabs.NATURAL_BLOCKS,
-                ModBlocks.ROOTED_GRASS_BLOCK,
                 ModBlocks.EARTHEN_CLAY, ModBlocks.SANDY_DIRT, ModBlocks.SILT, ModBlocks.PERMAFROST,
                 ModBlocks.GRASSY_EARTHEN_CLAY, ModBlocks.GRASSY_SANDY_DIRT, ModBlocks.GRASSY_SILT, ModBlocks.GRASSY_PERMAFROST
         );

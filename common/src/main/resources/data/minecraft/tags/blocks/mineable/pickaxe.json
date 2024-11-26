@@ -2,9 +2,14 @@
   "replace": false,
   "values": [
     "grounded:earthen_clay",
-    "grounded:permafrost",
     "grounded:grassy_earthen_clay",
+    "grounded:earthen_clay_farmland",
+    "grounded:coarse_earthen_clay",
+    "grounded:earthen_clay_path",
+
+    "grounded:permafrost",
     "grounded:grassy_permafrost",
-    "grounded:earthen_clay_farmland"
+    "grounded:coarse_permafrost",
+    "grounded:permafrost_path"
   ]
 }

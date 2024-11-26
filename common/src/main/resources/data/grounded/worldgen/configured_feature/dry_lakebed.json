@@ -10,7 +10,7 @@
           "block": "minecraft:water"
         },
         "state": {
-          "Name": "grounded:earthen_clay",
+          "Name": "grounded:coarse_earthen_clay",
           "Properties": {
             "waterlogged": "true"
           }

@@ -6,6 +6,11 @@
   "client": [
   ],
   "mixins": [
+    "AttachedStemBlockMixin",
+    "BushBlockMixin",
+    "CropBlockMixin",
+    "GrassBlockMixin",
+    "StemBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

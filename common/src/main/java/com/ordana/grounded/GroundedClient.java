@@ -20,8 +20,6 @@ public class GroundedClient {
         ClientHelper.registerRenderType(ModBlocks.GRASSY_SILT.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.GRASSY_EARTHEN_CLAY.get(), RenderType.cutout());
         ClientHelper.registerRenderType(ModBlocks.GRASSY_SANDY_DIRT.get(), RenderType.cutoutMipped());
-        ClientHelper.registerRenderType(ModBlocks.ROOTED_GRASS_BLOCK.get(), RenderType.cutoutMipped());
-        ClientHelper.registerRenderType(ModBlocks.HANGING_ROOTS_WALL.get(), RenderType.cutoutMipped());
     }
 
     @EventCalled
@@ -34,8 +32,7 @@ public class GroundedClient {
                 ModBlocks.GRASSY_PERMAFROST.get(),
                 ModBlocks.GRASSY_SILT.get(),
                 ModBlocks.GRASSY_EARTHEN_CLAY.get(),
-                ModBlocks.GRASSY_SANDY_DIRT.get(),
-                ModBlocks.ROOTED_GRASS_BLOCK.get());
+                ModBlocks.GRASSY_SANDY_DIRT.get());
     }
 
     private static void registerItemColors(ClientHelper.ItemColorEvent event) {
@@ -44,8 +41,7 @@ public class GroundedClient {
                 ModBlocks.GRASSY_SILT.get(),
                 ModBlocks.GRASSY_PERMAFROST.get(),
                 ModBlocks.GRASSY_SANDY_DIRT.get(),
-                ModBlocks.GRASSY_EARTHEN_CLAY.get(),
-                ModBlocks.ROOTED_GRASS_BLOCK.get());
+                ModBlocks.GRASSY_EARTHEN_CLAY.get());
     }
 
 }

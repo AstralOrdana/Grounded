@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:farmland",
+    "grounded:loamy_farmland",
+    "grounded:silty_farmland",
+    "grounded:sandy_farmland",
+    "grounded:earthen_clay_farmland"
+  ]
+}

@@ -1,1 +1,1 @@
-# Immersive Soils codebase for creating multiloader mods
+# Codebase of the Grounded mod

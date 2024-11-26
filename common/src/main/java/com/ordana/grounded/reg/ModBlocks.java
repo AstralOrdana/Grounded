@@ -39,10 +39,6 @@ public class ModBlocks {
     }
 
 
-    public static final Supplier<Block> HANGING_ROOTS_WALL = regBlock("hanging_roots_wall", () ->
-            new WallRootsBlock(Properties.copy(Blocks.HANGING_ROOTS)));
-
-
     public static final Supplier<Block> MULCH_BLOCK = regWithItem("mulch_block", () ->
             new MulchBlock(Properties.copy(Blocks.DIRT).strength(1f, 1f)
                     .sound(SoundType.ROOTED_DIRT).randomTicks()));
@@ -97,9 +93,5 @@ public class ModBlocks {
             new LoamBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN)));
     public static final Supplier<Block> LOAMY_FARMLAND = regWithItem("loamy_farmland", () ->
             new LoamyFarmlandBlock(Properties.copy(Blocks.DIRT).strength(0.6f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN)));
-
-    public static final Supplier<Block> ROOTED_GRASS_BLOCK = regWithItem("rooted_grass_block", () ->
-            new RootedGrassBlock(Properties.copy(Blocks.GRASS_BLOCK).randomTicks().strength(0.5F)
-                    .sound(SoundType.ROOTED_DIRT)));
 
 }

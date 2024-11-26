@@ -3,7 +3,6 @@
   "values": [
     "grounded:mulch_block",
     "grounded:nulch_block",
-    "grounded:rooted_grass_block",
 
     "grounded:earthen_clay",
     "grounded:permafrost",
@@ -19,6 +18,16 @@
     "grounded:earthen_clay_farmland",
     "grounded:silty_farmland",
     "grounded:loamy_farmland",
-    "grounded:sandy_farmland"
+    "grounded:sandy_farmland",
+
+    "grounded:coarse_earthen_clay",
+    "grounded:coarse_permafrost",
+    "grounded:coarse_silt",
+    "grounded:coarse_sandy_dirt",
+
+    "grounded:earthen_clay_path",
+    "grounded:permafrost_path",
+    "grounded:silt_path",
+    "grounded:sandy_dirt_path"
   ]
 }
