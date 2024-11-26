@@ -1,7 +1,7 @@
 
 modLoader="javafml"
 
-loaderVersion="[40,)" This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[40,)"
 
 license="LGPLv3"
 
@@ -13,15 +13,15 @@ version = "${version}"
 
 displayName="Grounded"
 
-logoFile="icon.png" #optional
+logoFile="icon.gif" #optional
 
 credits="Ordana" #optional
 
-authors="Ordana" #optional
+authors="Ordana, Kayla_the_bee" #optional
 
 itemIcon="grounded:template" #catalogue icon
 description='''
-Grounded Description
+New soil variants to spice up your world
 '''
 
 [[dependencies.grounded]]
@@ -34,13 +34,13 @@ Grounded Description
 [[dependencies.grounded]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.20.1,1.21)"
+    versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.grounded]]
     modId="moonlight"
     mandatory=true
-    versionRange="[1.20-2.7.0,]"
+    versionRange="[1.20-2.13.30,]"
     ordering="AFTER"
     side="BOTH"

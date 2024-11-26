@@ -3,7 +3,7 @@
   "id": "grounded",
   "version": "${version}",
   "name": "Grounded",
-  "description": "Grounded Description",
+  "description": "New soil variants to spice up your world",
   "authors": [
     "Ordana"
   ],
@@ -12,7 +12,7 @@
     "sources": "https://github.com/AstralOrdana/grounded"
   },
   "license": "LGPLv3",
-  "icon": "icon.png",
+  "icon": "icon.gif",
   "environment": "*",
   "entrypoints": {
     "main": [
