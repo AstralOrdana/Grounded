@@ -8,7 +8,7 @@
     "Ordana"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/grounded",
+    "homepage": "https://modrinth.com/mod/grounded",
     "sources": "https://github.com/AstralOrdana/grounded"
   },
   "license": "LGPLv3",
@@ -25,7 +25,7 @@
   ],
   "depends": {
     "fabric": "*",
-    "moonlight": ">=1.20-2.7.0",
-    "minecraft": ">=1.20.1"
+    "minecraft": "1.20.1",
+    "moonlight": ">=1.20-2.3.30"
   }
 }
