@@ -1,8 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#grounded:has_moss",
-  "features": [
-    "grounded:moss_patch"
-  ],
-  "step": "vegetal_decoration"
-}
