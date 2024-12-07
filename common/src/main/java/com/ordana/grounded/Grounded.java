@@ -2,7 +2,7 @@ package com.ordana.grounded;
 
 import com.ordana.grounded.reg.ModBlocks;
 import com.ordana.grounded.reg.ModCreativeTab;
-import com.ordana.grounded.reg.ModFeatures;
+import com.ordana.grounded.reg.ModWorldgen;
 import net.mehvahdjukaar.moonlight.api.platform.PlatHelper;
 import net.minecraft.resources.ResourceLocation;
 
@@ -22,7 +22,7 @@ public class Grounded {
 
         ModCreativeTab.init();
         ModBlocks.init();
-        ModFeatures.init();
+        ModWorldgen.init();
     }
 
 }

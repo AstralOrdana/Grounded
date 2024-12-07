@@ -42,7 +42,7 @@ public class GrassBlockMixin {
                                  @Share("newSoil")LocalRef<BlockState> newSoil) {
         BlockState soil = newSoil.get();
         if(soil != null){
-            if(state.hasProperty(SnowyDirtBlock.SNOWY) && state.getValue(SnowyDirtBlock.SNOWY)){
+            if(state.hasProperty(SnowyDirtBlock.SNOWY) && state.getValue(SnowyDirtBlock.SNOWY)) {
                 soil = soil.setValue(SnowyDirtBlock.SNOWY, true);
             }
             return operation.call(instance, pos, soil);

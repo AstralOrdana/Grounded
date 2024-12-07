@@ -8,7 +8,7 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
-public class ModFeatures {
+public class ModWorldgen {
 
     public static void init() {
 
