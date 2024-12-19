@@ -1,8 +1,8 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "top": "grounded:block/coarse_earthen_clay_top",
-    "bottom": "grounded:block/coarse_earthen_clay_bottom",
-    "side": "grounded:block/coarse_earthen_clay_side"
+  {
+    "parent": "minecraft:block/cube_bottom_top",
+    "textures": {
+      "top": "grounded:block/coarse_earthen_clay_top",
+      "bottom": "grounded:block/coarse_earthen_clay_bottom",
+      "side": "grounded:block/coarse_earthen_clay_side"
+    }
   }
-}

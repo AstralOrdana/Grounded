@@ -20,6 +20,6 @@ public abstract class BushBlockMixin extends Block {
 
     @Inject(method = "mayPlaceOn", at = @At(value = "HEAD"), cancellable = true)
     protected void mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(state.is(ModTags.FARMLANDS));
+        if (state.is(ModTags.FARMLANDS)) cir.setReturnValue(true);
     }
 }
