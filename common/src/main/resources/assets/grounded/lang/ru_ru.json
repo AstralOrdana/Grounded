@@ -1,0 +1,32 @@
+{
+
+  "block.grounded.silt": "Ил",
+  "block.grounded.grassy_silt": "Травянистый ил",
+  "block.grounded.silt_path": "Иловая тропинка",
+  "block.grounded.coarse_silt": "Грубая ил",
+  "block.grounded.silty_farmland": "Илистая пашня",
+
+  "block.grounded.sandy_dirt": "Песчаная грязь",
+  "block.grounded.grassy_sandy_dirt": "Травянистая песчаная грязь",
+  "block.grounded.sandy_dirt_path": "Песчаная грязевая тропинка",
+  "block.grounded.coarse_sandy_dirt": "Грубая песчаная грязь",
+  "block.grounded.sandy_farmland": "Песчаная пашня",
+
+  "block.grounded.earthen_clay": "Земляная глина",
+  "block.grounded.grassy_earthen_clay": "Травянистая земляная глина",
+  "block.grounded.earthen_clay_path": "Глиняная тропинка",
+  "block.grounded.coarse_earthen_clay": "Грубая земляная глина",
+  "block.grounded.earthen_clay_farmland": "Глиняная пашня",
+
+  "block.grounded.permafrost": "Вечная мерзлота",
+  "block.grounded.grassy_permafrost": "Травянистая вечная мерзлота",
+  "block.grounded.coarse_permafrost": "Грубая вечная мерзлота",
+  "block.grounded.permafrost_path": "Тропинка вечной мерзлоты",
+
+  "block.grounded.loam": "Суглинок",
+  "block.grounded.grassy_loam": "Травянистый суглинок",
+  "block.grounded.loamy_farmland": "Суглинистая пашня",
+
+  "block.grounded.mulch_block": "Мульча",
+  "block.grounded.nulch_block": "Нульч"
+}
