@@ -71,7 +71,7 @@ public class BaseSoilBlock extends SnowyDirtBlock implements BonemealableBlock {
     }
 
     @Override
-    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
+    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState blockState) {
         return level.getBlockState(pos.above()).isAir();
     }
 
@@ -81,7 +81,7 @@ public class BaseSoilBlock extends SnowyDirtBlock implements BonemealableBlock {
 
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
         BlockPos blockPos = pos.above();
-        BlockState blockState = Blocks.GRASS.defaultBlockState();
+        BlockState blockState = Blocks.TALL_GRASS.defaultBlockState();
         Optional<Holder.Reference<PlacedFeature>> optional = level.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(VegetationPlacements.GRASS_BONEMEAL);
 
         label49:

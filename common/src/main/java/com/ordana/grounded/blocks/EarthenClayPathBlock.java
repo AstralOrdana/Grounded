@@ -36,6 +36,7 @@ public class EarthenClayPathBlock extends DirtPathBlock implements SimpleWaterlo
         stateManager.add(WATERLOGGED);
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
 
         FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
@@ -43,12 +44,12 @@ public class EarthenClayPathBlock extends DirtPathBlock implements SimpleWaterlo
         return !this.defaultBlockState().canSurvive(context.getLevel(), context.getClickedPos()) ? Block.pushEntitiesUp(this.defaultBlockState(), Objects.requireNonNull(ModBlocks.EARTHEN_CLAY.get().getStateForPlacement(context)), context.getLevel(), context.getClickedPos()) : Objects.requireNonNull(super.getStateForPlacement(context)).setValue(WATERLOGGED, bl);
     }
 
+    @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         turnToDirt(state, level, pos);
     }
 
-
-
+    @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos currentPos, BlockPos neighborPos) {
         if (state.getValue(WATERLOGGED)) {
             level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
@@ -59,6 +60,7 @@ public class EarthenClayPathBlock extends DirtPathBlock implements SimpleWaterlo
         return state;
     }
 
+    @Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
