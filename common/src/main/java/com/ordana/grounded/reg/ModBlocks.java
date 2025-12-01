@@ -40,58 +40,58 @@ public class ModBlocks {
 
 
     public static final Supplier<Block> MULCH_BLOCK = regWithItem("mulch_block", () ->
-            new MulchBlock(Properties.ofFullCopy(Blocks.DIRT).strength(1f, 1f)
+            new MulchBlock(Properties.copy(Blocks.DIRT).strength(1f, 1f)
                     .sound(SoundType.ROOTED_DIRT).randomTicks()));
     public static final Supplier<Block> NULCH_BLOCK = regWithItem("nulch_block", () ->
-            new NulchBlock(Properties.ofFullCopy(Blocks.DIRT).strength(1f, 1f)
+            new NulchBlock(Properties.copy(Blocks.DIRT).strength(1f, 1f)
                     .sound(SoundType.NETHER_WART).lightLevel(moltenLightLevel(10)).randomTicks()));
 
 
     public static final Supplier<Block> SILT = regWithItem("silt", () ->
-            new SiltBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD).mapColor(MapColor.TERRACOTTA_BROWN)));
+            new SiltBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD).mapColor(MapColor.TERRACOTTA_BROWN)));
     public static final Supplier<Block> GRASSY_SILT = regWithItem("grassy_silt", () ->
-            new SiltBlockGrassy(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD).mapColor(MapColor.GRASS)));
+            new SiltBlockGrassy(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD).mapColor(MapColor.GRASS)));
     public static final Supplier<Block> SILT_PATH = regWithItem("silt_path", () ->
-            new SiltPathBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD).mapColor(MapColor.TERRACOTTA_BROWN)));
+            new SiltPathBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD).mapColor(MapColor.TERRACOTTA_BROWN)));
     public static final Supplier<Block> COARSE_SILT = regWithItem("coarse_silt", () ->
-            new SiltBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD).mapColor(MapColor.TERRACOTTA_BROWN)));
+            new SiltBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD).mapColor(MapColor.TERRACOTTA_BROWN)));
     public static final Supplier<Block> SILTY_FARMLAND = regWithItem("silty_farmland", () ->
-            new SiltyFarmlandBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.6f).sound(SoundType.MUD).mapColor(MapColor.TERRACOTTA_BROWN)));
+            new SiltyFarmlandBlock(Properties.copy(Blocks.DIRT).strength(0.6f).sound(SoundType.MUD).mapColor(MapColor.TERRACOTTA_BROWN)));
 
     public static final Supplier<Block> SANDY_DIRT = regWithItem("sandy_dirt", () ->
-            new SandyDirtBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND).mapColor(MapColor.SAND)));
+            new SandyDirtBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND).mapColor(MapColor.SAND)));
     public static final Supplier<Block> GRASSY_SANDY_DIRT = regWithItem("grassy_sandy_dirt", () ->
-            new SandyDirtBlockGrassy(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND).mapColor(MapColor.GRASS)));
+            new SandyDirtBlockGrassy(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND).mapColor(MapColor.GRASS)));
     public static final Supplier<Block> SANDY_DIRT_PATH = regWithItem("sandy_dirt_path", () ->
-            new SandyDirtPathBlock(Properties.ofFullCopy(Blocks.DIRT_PATH).strength(0.5f).sound(SoundType.SAND).mapColor(MapColor.TERRACOTTA_BROWN)));
+            new SandyDirtPathBlock(Properties.copy(Blocks.DIRT_PATH).strength(0.5f).sound(SoundType.SAND).mapColor(MapColor.TERRACOTTA_BROWN)));
     public static final Supplier<Block> COARSE_SANDY_DIRT = regWithItem("coarse_sandy_dirt", () ->
-            new SandyDirtBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND).mapColor(MapColor.SAND)));
+            new SandyDirtBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND).mapColor(MapColor.SAND)));
     public static final Supplier<Block> SANDY_FARMLAND = regWithItem("sandy_farmland", () ->
-            new SandyFarmlandBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.6f).sound(SoundType.SAND).mapColor(MapColor.TERRACOTTA_BROWN)));
+            new SandyFarmlandBlock(Properties.copy(Blocks.DIRT).strength(0.6f).sound(SoundType.SAND).mapColor(MapColor.TERRACOTTA_BROWN)));
 
     public static final Supplier<Block> EARTHEN_CLAY = regWithItem("earthen_clay", () ->
-            new EarthenClayBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.BASALT).mapColor(MapColor.TERRACOTTA_ORANGE)));
+            new EarthenClayBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.BASALT).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Supplier<Block> GRASSY_EARTHEN_CLAY = regWithItem("grassy_earthen_clay", () ->
-            new EarthenClayBlockGrassy(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.BASALT).mapColor(MapColor.GRASS)));
+            new EarthenClayBlockGrassy(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.BASALT).mapColor(MapColor.GRASS)));
     public static final Supplier<Block> EARTHEN_CLAY_PATH = regWithItem("earthen_clay_path", () ->
-            new EarthenClayPathBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.BASALT).mapColor(MapColor.TERRACOTTA_ORANGE)));
+            new EarthenClayPathBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.BASALT).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Supplier<Block> COARSE_EARTHEN_CLAY = regWithItem("coarse_earthen_clay", () ->
-            new EarthenClayBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.BASALT).mapColor(MapColor.TERRACOTTA_ORANGE)));
+            new EarthenClayBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.BASALT).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Supplier<Block> EARTHEN_CLAY_FARMLAND = regWithItem("earthen_clay_farmland", () ->
-            new EarthenClayFarmlandBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.6f).sound(SoundType.BASALT).mapColor(MapColor.TERRACOTTA_ORANGE)));
+            new EarthenClayFarmlandBlock(Properties.copy(Blocks.DIRT).strength(0.6f).sound(SoundType.BASALT).mapColor(MapColor.TERRACOTTA_ORANGE)));
 
     public static final Supplier<Block> PERMAFROST = regWithItem("permafrost", () ->
-            new PermafrostBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.8f).sound(SoundType.CALCITE).mapColor(MapColor.SNOW)));
+            new PermafrostBlock(Properties.copy(Blocks.DIRT).strength(0.8f).sound(SoundType.CALCITE).mapColor(MapColor.SNOW)));
     public static final Supplier<Block> GRASSY_PERMAFROST = regWithItem("grassy_permafrost", () ->
-            new PermafrostBlockGrassy(Properties.ofFullCopy(Blocks.DIRT).strength(0.8f).sound(SoundType.CALCITE).mapColor(MapColor.GRASS)));
+            new PermafrostBlockGrassy(Properties.copy(Blocks.DIRT).strength(0.8f).sound(SoundType.CALCITE).mapColor(MapColor.GRASS)));
     public static final Supplier<Block> COARSE_PERMAFROST = regWithItem("coarse_permafrost", () ->
-            new PermafrostBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.8f).sound(SoundType.CALCITE).mapColor(MapColor.SNOW)));
+            new PermafrostBlock(Properties.copy(Blocks.DIRT).strength(0.8f).sound(SoundType.CALCITE).mapColor(MapColor.SNOW)));
     public static final Supplier<Block> PERMAFROST_PATH = regWithItem("permafrost_path", () ->
-            new PermafrostPathBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.8f).sound(SoundType.CALCITE).mapColor(MapColor.SNOW)));
+            new PermafrostPathBlock(Properties.copy(Blocks.DIRT).strength(0.8f).sound(SoundType.CALCITE).mapColor(MapColor.SNOW)));
 
     public static final Supplier<Block> LOAM = regWithItem("loam", () ->
-            new LoamBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN)));
+            new LoamBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN)));
     public static final Supplier<Block> LOAMY_FARMLAND = regWithItem("loamy_farmland", () ->
-            new LoamyFarmlandBlock(Properties.ofFullCopy(Blocks.DIRT).strength(0.6f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN)));
+            new LoamyFarmlandBlock(Properties.copy(Blocks.DIRT).strength(0.6f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN)));
 
 }

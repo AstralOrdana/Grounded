@@ -21,12 +21,10 @@ public class PermafrostPathBlock extends ModFallingPathBlock {
         super(properties);
     }
 
-    @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return !this.defaultBlockState().canSurvive(context.getLevel(), context.getClickedPos()) ? Block.pushEntitiesUp(this.defaultBlockState(), ModBlocks.PERMAFROST.get().defaultBlockState(), context.getLevel(), context.getClickedPos()) : this.defaultBlockState();
     }
 
-    @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (canMelt(level, pos)) level.scheduleTick(pos, this, this.getDelayAfterPlace());
     }
@@ -45,7 +43,6 @@ public class PermafrostPathBlock extends ModFallingPathBlock {
         }
     }
 
-    @Override
     public boolean isRandomlyTicking(BlockState state) {
         return true;
     }
@@ -64,7 +61,6 @@ public class PermafrostPathBlock extends ModFallingPathBlock {
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
     }
 
-    @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
         if (direction == Direction.UP && !state.canSurvive(level, pos)) {
             level.scheduleTick(pos, this, 1);
@@ -73,12 +69,10 @@ public class PermafrostPathBlock extends ModFallingPathBlock {
         return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
     }
 
-    @Override
     public void onLand(Level level, BlockPos pos, BlockState state, BlockState replaceableState, FallingBlockEntity fallingBlock) {
         if (level.random.nextBoolean()) level.destroyBlock(pos, false);
     }
 
-    @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (canMelt(level, pos) && isFree(level.getBlockState(pos.below())) && pos.getY() >= level.getMinBuildHeight()) {
             FallingBlockEntity fallingBlockEntity = FallingBlockEntity.fall(level, pos, state);

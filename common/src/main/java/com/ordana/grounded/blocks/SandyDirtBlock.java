@@ -1,6 +1,5 @@
 package com.ordana.grounded.blocks;
 
-import com.mojang.serialization.MapCodec;
 import com.ordana.grounded.reg.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -9,7 +8,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -26,13 +24,7 @@ public class SandyDirtBlock extends FallingBlock {
         super(properties);
     }
 
-    @Override
-    protected MapCodec<? extends FallingBlock> codec() {
-        return simpleCodec(SandyDirtBlock::new);
-    }
-
-    @Override
-    protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
         var coarse = state.getBlock() == ModBlocks.COARSE_SANDY_DIRT.get();
@@ -41,14 +33,14 @@ public class SandyDirtBlock extends FallingBlock {
         if (item instanceof HoeItem) tool = 2;
         if (tool > 0) {
             level.playSound(player, pos, tool == 1 ? SoundEvents.SHOVEL_FLATTEN : SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0f, 1.0f);
-            stack.hurtAndBreak(1, player, Player.getSlotForHand(hand));
+            stack.hurtAndBreak(1, player, (l) -> l.broadcastBreakEvent(hand));
             if (player instanceof ServerPlayer) {
                 level.setBlockAndUpdate(pos, tool == 1 ? ModBlocks.SANDY_DIRT_PATH.get().defaultBlockState() : coarse ? ModBlocks.SANDY_DIRT.get().defaultBlockState() : ModBlocks.SANDY_FARMLAND.get().defaultBlockState());
                 player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
             }
-            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.sidedSuccess(level.isClientSide);
         }
-        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+        return super.use(state, level, pos, player, hand, hitResult);
     }
 
     public int getDustColor(BlockState state, BlockGetter level, BlockPos pos) {

@@ -13,7 +13,6 @@ import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -54,7 +53,6 @@ public class EarthenClayBlockGrassy extends BaseSoilBlock implements SimpleWater
         return super.getStateForPlacement(context).setValue(WATERLOGGED, bl);
     }
 
-    @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos currentPos, BlockPos neighborPos) {
         if (state.getValue(WATERLOGGED)) {
             level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
@@ -104,8 +102,7 @@ public class EarthenClayBlockGrassy extends BaseSoilBlock implements SimpleWater
         super.randomTick(blockState, serverLevel, pos, random);
     }
 
-    @Override
-    protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
         var bl = state.getValue(WATERLOGGED);
@@ -114,13 +111,13 @@ public class EarthenClayBlockGrassy extends BaseSoilBlock implements SimpleWater
         if (item instanceof HoeItem) tool = 2;
         if (tool > 0) {
             level.playSound(player, pos, tool == 1 ? SoundEvents.SHOVEL_FLATTEN : SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0f, 1.0f);
-            stack.hurtAndBreak(1, player, Player.getSlotForHand(hand));
+            stack.hurtAndBreak(1, player, (l) -> l.broadcastBreakEvent(hand));
             if (player instanceof ServerPlayer) {
                 level.setBlockAndUpdate(pos, tool == 1 ? ModBlocks.EARTHEN_CLAY_PATH.get().defaultBlockState().setValue(WATERLOGGED, bl) : ModBlocks.EARTHEN_CLAY_FARMLAND.get().defaultBlockState().setValue(BlockStateProperties.MOISTURE, bl ? 7 : 0));
                 player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
             }
-            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.sidedSuccess(level.isClientSide);
         }
-        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
+        return super.use(state, level, pos, player, hand, hitResult);
     }
 }

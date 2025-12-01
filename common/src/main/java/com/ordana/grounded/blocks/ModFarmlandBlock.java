@@ -27,14 +27,12 @@ public class ModFarmlandBlock extends FarmBlock {
         return true;
     }
 
-    @Override
     public void tick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
         if (!blockState.canSurvive(serverLevel, blockPos)) {
             turnToDirt(null, blockState, serverLevel, blockPos);
         }
     }
 
-    @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return !this.defaultBlockState().canSurvive(context.getLevel(), context.getClickedPos()) ? Blocks.DIAMOND_BLOCK.defaultBlockState() : super.getStateForPlacement(context);
     }
@@ -44,7 +42,6 @@ public class ModFarmlandBlock extends FarmBlock {
         return block instanceof CropBlock || block instanceof StemBlock || block instanceof AttachedStemBlock || block instanceof SweetBerryBushBlock || block instanceof BambooStalkBlock || block instanceof BambooSaplingBlock;
     }
 
-    @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockState blockState = level.getBlockState(pos.above());
         Block block = blockState.getBlock();

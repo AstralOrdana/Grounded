@@ -10,11 +10,9 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -41,7 +39,6 @@ public class PermafrostBlockGrassy extends BaseSoilBlockFallable {
         }
     }
 
-    @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (canMelt(level, pos)) level.scheduleTick(pos, this, this.getDelayAfterPlace());
         if (!canBeGrass(state, level, pos)) {
@@ -64,7 +61,6 @@ public class PermafrostBlockGrassy extends BaseSoilBlockFallable {
         }
     }
 
-    @Override
     public boolean isRandomlyTicking(BlockState state) {
         return true;
     }
@@ -83,27 +79,27 @@ public class PermafrostBlockGrassy extends BaseSoilBlockFallable {
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
     }
 
-
     @Override
-    public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
-        return direction == Direction.UP ? blockState.setValue(SNOWY, isSnowySetting(blockState2)) : super.updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2);
+    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+        return state;
     }
 
     public void onLand(Level level, BlockPos pos, BlockState state, BlockState replaceableState, FallingBlockEntity fallingBlock) {
         if (level.random.nextBoolean()) level.destroyBlock(pos, false);
     }
 
-    @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult blockHitResult) {
-        if (stack.is(ItemTags.SHOVELS)) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        ItemStack stack = player.getItemInHand(hand);
+        Item item = stack.getItem();
+        if (item instanceof ShovelItem) {
             level.playSound(player, pos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1.0f, 1.0f);
-            stack.hurtAndBreak(1, player, Player.getSlotForHand(hand));
+            stack.hurtAndBreak(1, player, (l) -> l.broadcastBreakEvent(hand));
             if (player instanceof ServerPlayer) {
                 level.setBlockAndUpdate(pos, ModBlocks.PERMAFROST_PATH.get().withPropertiesOf(state));
                 player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
             }
-            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.sidedSuccess(level.isClientSide);
         }
-        return super.useItemOn(stack, state, level, pos, player, hand, blockHitResult);
+        return super.use(state, level, pos, player, hand, hitResult);
     }
 }

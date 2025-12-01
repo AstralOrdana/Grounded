@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#grounded:has_earthen_clay",
+  "features": [
+    "grounded:earthen_clay"
+  ],
+  "step": "raw_generation"
+}
