@@ -1,5 +1,6 @@
 package com.ordana.grounded.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
@@ -37,6 +38,11 @@ public class BaseSoilBlockFallable extends FallingBlock implements BonemealableB
     }
 
     @Override
+    protected MapCodec<? extends FallingBlock> codec() {
+        return simpleCodec(BaseSoilBlockFallable::new);
+    }
+
+    @Override
     public boolean isRandomlyTicking(BlockState state) {
         return true;
     }
@@ -54,11 +60,13 @@ public class BaseSoilBlockFallable extends FallingBlock implements BonemealableB
         }
     }
 
+
     public static boolean canPropagate(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos blockpos = pos.above();
         return canBeGrass(state, level, pos) && !level.getFluidState(blockpos).is(FluidTags.WATER);
     }
 
+    @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (level.getMaxLocalRawBrightness(pos.above()) >= 9 && canBeGrass(state, level, pos)) {
 
@@ -76,18 +84,21 @@ public class BaseSoilBlockFallable extends FallingBlock implements BonemealableB
         }
     }
 
+
     @Override
-    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
+    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState blockState) {
         return level.getBlockState(pos.above()).isAir();
     }
 
+    @Override
     public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
         return true;
     }
 
+    @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
         BlockPos blockPos = pos.above();
-        BlockState blockState = Blocks.GRASS.defaultBlockState();
+        BlockState blockState = Blocks.TALL_GRASS.defaultBlockState();
         Optional<Holder.Reference<PlacedFeature>> optional = level.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(VegetationPlacements.GRASS_BONEMEAL);
 
         label49:
@@ -137,7 +148,7 @@ public class BaseSoilBlockFallable extends FallingBlock implements BonemealableB
         return this.defaultBlockState().setValue(SNOWY, isSnowySetting(blockState));
     }
 
-    private static boolean isSnowySetting(BlockState state) {
+    static boolean isSnowySetting(BlockState state) {
         return state.is(BlockTags.SNOW);
     }
 
