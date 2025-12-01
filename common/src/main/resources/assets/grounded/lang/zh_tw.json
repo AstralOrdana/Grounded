@@ -1,0 +1,31 @@
+{
+  "block.grounded.silt": "淤泥",
+  "block.grounded.grassy_silt": "淤泥草地",
+  "block.grounded.silt_path": "淤泥徑",
+  "block.grounded.coarse_silt": "粗淤泥",
+  "block.grounded.silty_farmland": "淤泥耕地",
+
+  "block.grounded.sandy_dirt": "沙土",
+  "block.grounded.grassy_sandy_dirt": "沙土草地",
+  "block.grounded.sandy_dirt_path": "沙土徑",
+  "block.grounded.coarse_sandy_dirt": "粗沙土",
+  "block.grounded.sandy_farmland": "沙土耕地",
+
+  "block.grounded.earthen_clay": "陶土",
+  "block.grounded.grassy_earthen_clay": "陶土草地",
+  "block.grounded.earthen_clay_path": "陶土徑",
+  "block.grounded.coarse_earthen_clay": "粗陶土",
+  "block.grounded.earthen_clay_farmland": "陶土耕地",
+
+  "block.grounded.permafrost": "永凍土",
+  "block.grounded.grassy_permafrost": "永凍土草地",
+  "block.grounded.coarse_permafrost": "粗永凍土",
+  "block.grounded.permafrost_path": "永凍土徑",
+
+  "block.grounded.loam": "壤土",
+  "block.grounded.grassy_loam": "壤土草地",
+  "block.grounded.loamy_farmland": "壤土耕地",
+
+  "block.grounded.mulch_block": "覆土",
+  "block.grounded.nulch_block": "地獄覆土"
+}
