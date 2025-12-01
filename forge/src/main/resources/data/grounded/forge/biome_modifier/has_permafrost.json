@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#grounded:has_permafrost",
+  "features": [
+    "grounded:permafrost"
+  ],
+  "step": "raw_generation"
+}

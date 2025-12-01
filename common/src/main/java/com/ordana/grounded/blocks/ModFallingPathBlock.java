@@ -1,6 +1,5 @@
 package com.ordana.grounded.blocks;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -23,22 +22,14 @@ public class ModFallingPathBlock extends FallingBlock {
         super(properties);
     }
 
-    @Override
-    protected MapCodec<? extends FallingBlock> codec() {
-        return simpleCodec(ModFallingPathBlock::new);
-    }
-
-    @Override
     public boolean useShapeForLightOcclusion(BlockState state) {
         return true;
     }
 
-    @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return !this.defaultBlockState().canSurvive(context.getLevel(), context.getClickedPos()) ? Block.pushEntitiesUp(this.defaultBlockState(), Blocks.DIRT.defaultBlockState(), context.getLevel(), context.getClickedPos()) : super.getStateForPlacement(context);
     }
 
-    @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
         if (direction == Direction.UP && !state.canSurvive(level, pos)) {
             level.scheduleTick(pos, this, 1);
@@ -47,7 +38,6 @@ public class ModFallingPathBlock extends FallingBlock {
         return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
     }
 
-    @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (isFree(level.getBlockState(pos.below())) && pos.getY() >= level.getMinBuildHeight()) {
             FallingBlockEntity fallingBlockEntity = FallingBlockEntity.fall(level, pos, state);
@@ -56,19 +46,16 @@ public class ModFallingPathBlock extends FallingBlock {
         FarmBlock.turnToDirt(null, state, level, pos);
     }
 
-    @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockState blockState = level.getBlockState(pos.above());
         return !blockState.isSolid() || blockState.getBlock() instanceof FenceGateBlock;
     }
 
-    @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
 
-    @Override
-    protected boolean isPathfindable(BlockState blockState, PathComputationType pathComputationType) {
+    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
         return false;
     }
 

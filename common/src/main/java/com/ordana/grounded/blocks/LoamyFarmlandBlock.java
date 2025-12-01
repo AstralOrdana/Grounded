@@ -25,7 +25,6 @@ public class LoamyFarmlandBlock extends ModFarmlandBlock {
         this.registerDefaultState(this.stateDefinition.any().setValue(MOISTURE, 0));
     }
 
-    @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return !this.defaultBlockState().canSurvive(context.getLevel(), context.getClickedPos()) ? ModBlocks.LOAM.get().defaultBlockState() : super.getStateForPlacement(context);
     }

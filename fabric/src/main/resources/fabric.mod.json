@@ -8,13 +8,9 @@
     "Ordana",
     "Kayla_the_bee"
   ],
-  "contributors": [
-    "cassiancc"
-  ],
   "contact": {
     "homepage": "https://modrinth.com/mod/grounded",
-    "sources": "https://github.com/AstralOrdana/grounded",
-    "issues": "https://github.com/AstralOrdana/grounded/issues"
+    "sources": "https://github.com/AstralOrdana/grounded"
   },
   "license": "LGPLv3",
   "icon": "icon.gif",
@@ -29,8 +25,8 @@
     "grounded-common.mixins.json"
   ],
   "depends": {
-    "fabric-api": "*",
-    "minecraft": "1.21.1",
+    "fabric": "*",
+    "minecraft": "1.20.1",
     "moonlight": ">=1.20-2.3.30"
   }
 }
