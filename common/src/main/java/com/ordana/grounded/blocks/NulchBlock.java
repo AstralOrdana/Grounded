@@ -12,6 +12,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -87,7 +88,10 @@ public class NulchBlock extends Block {
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if (state.getValue(MOLTEN)) {
-            if (!entity.fireImmune() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity) entity)) {
+            if (!entity.fireImmune() && entity instanceof LivingEntity
+                    //FIXME
+//                    && !EnchantmentHelper.hasFrostWalker((LivingEntity) entity)
+            ) {
                 entity.hurt(level.damageSources().hotFloor(), 1.0F);
             }
         }
@@ -112,10 +116,9 @@ public class NulchBlock extends Block {
 
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!player.isSecondaryUseActive()) {
             // empty bucket into mulch
-            ItemStack stack = player.getItemInHand(hand);
             if (stack.is(Items.LAVA_BUCKET) && !state.getValue(MOLTEN)) {
                 level.playSound(player, pos, SoundEvents.BUCKET_EMPTY_LAVA, SoundSource.BLOCKS, 1.0f, 1.0f);
                 ParticleUtils.spawnParticlesOnBlockFaces(level, pos, ParticleTypes.LAVA, UniformInt.of(3, 5));
@@ -125,7 +128,7 @@ public class NulchBlock extends Block {
                     level.setBlockAndUpdate(pos, state.setValue(MOLTEN, true));
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                 }
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return ItemInteractionResult.sidedSuccess(level.isClientSide);
             }
             // fill bucket from mulch
             else if (stack.is(Items.BUCKET) && state.getValue(MOLTEN)) {
@@ -137,10 +140,10 @@ public class NulchBlock extends Block {
                     level.setBlockAndUpdate(pos, state.setValue(MOLTEN, false));
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                 }
-                return InteractionResult.SUCCESS;
+                return ItemInteractionResult.SUCCESS;
             }
         }
-        return super.use(state, level, pos, player, hand, hit);
+        return super.useItemOn(stack, state, level, pos, player, hand, hit);
     }
 
 

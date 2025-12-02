@@ -12,6 +12,7 @@ import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -102,7 +103,7 @@ public class EarthenClayFarmlandBlock extends ModFarmlandBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (!player.isSecondaryUseActive()) {
             // empty bucket into mulch
             ItemStack stack = player.getItemInHand(hand);
@@ -114,7 +115,7 @@ public class EarthenClayFarmlandBlock extends ModFarmlandBlock {
                     level.setBlockAndUpdate(pos, state.setValue(MOISTURE, 7));
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                 }
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return ItemInteractionResult.sidedSuccess(level.isClientSide);
             }
             // fill bucket from mulch
             else if (stack.is(Items.BUCKET) && state.getValue(MOISTURE) > 0) {
@@ -125,9 +126,9 @@ public class EarthenClayFarmlandBlock extends ModFarmlandBlock {
                     level.setBlockAndUpdate(pos, state.setValue(MOISTURE, 0));
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
                 }
-                return InteractionResult.SUCCESS;
+                return ItemInteractionResult.SUCCESS;
             }
         }
-        return super.use(state, level, pos, player, hand, hit);
+        return super.useItemOn(itemStack, state, level, pos, player, hand, hitResult);
     }
 }
