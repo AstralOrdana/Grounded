@@ -1,5 +1,6 @@
 package com.ordana.grounded.blocks;
 
+import com.mojang.serialization.MapCodec;
 import com.ordana.grounded.reg.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -13,6 +14,7 @@ import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.HoeItem;
@@ -33,6 +35,11 @@ public class PermafrostBlock extends FallingBlock {
     }
 
     @Override
+    protected MapCodec<? extends FallingBlock> codec() {
+        return simpleCodec(PermafrostBlock::new);
+    }
+
+    @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (isFree(level.getBlockState(pos.below())) && pos.getY() >= level.getMinBuildHeight()) {
             FallingBlockEntity fallingBlockEntity = FallingBlockEntity.fall(level, pos, state);
@@ -40,6 +47,7 @@ public class PermafrostBlock extends FallingBlock {
         }
     }
 
+    @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (canMelt(level, pos)) level.scheduleTick(pos, this, this.getDelayAfterPlace());
     }
@@ -81,11 +89,13 @@ public class PermafrostBlock extends FallingBlock {
         return state;
     }
 
+    @Override
     public void onLand(Level level, BlockPos pos, BlockState state, BlockState replaceableState, FallingBlockEntity fallingBlock) {
         if (level.random.nextBoolean()) level.destroyBlock(pos, false);
     }
 
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
         var tool = 0;
@@ -93,14 +103,14 @@ public class PermafrostBlock extends FallingBlock {
         if (item instanceof HoeItem) tool = 2;
         if (tool > 0) {
             level.playSound(player, pos, tool == 1 ? SoundEvents.SHOVEL_FLATTEN : SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0f, 1.0f);
-            stack.hurtAndBreak(1, player, (l) -> l.broadcastBreakEvent(hand));
+            stack.hurtAndBreak(1, player, Player.getSlotForHand(hand));
             if (player instanceof ServerPlayer) {
                 level.setBlockAndUpdate(pos, tool == 1 ? ModBlocks.PERMAFROST_PATH.get().defaultBlockState() : ModBlocks.PERMAFROST.get().defaultBlockState());
                 player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return ItemInteractionResult.sidedSuccess(level.isClientSide);
         }
-        return super.use(state, level, pos, player, hand, hitResult);
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 
 }
