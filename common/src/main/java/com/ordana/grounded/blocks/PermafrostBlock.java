@@ -94,13 +94,16 @@ public class PermafrostBlock extends FallingBlock {
         if (level.random.nextBoolean()) level.destroyBlock(pos, false);
     }
 
+
     @Override
     protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stack = player.getItemInHand(hand);
         Item item = stack.getItem();
+        var coarse = state.getBlock() == ModBlocks.COARSE_PERMAFROST.get();
         var tool = 0;
         if (item instanceof ShovelItem) tool = 1;
         if (item instanceof HoeItem) tool = 2;
+        if (!coarse && tool == 2) return ItemInteractionResult.FAIL;
         if (tool > 0) {
             level.playSound(player, pos, tool == 1 ? SoundEvents.SHOVEL_FLATTEN : SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0f, 1.0f);
             stack.hurtAndBreak(1, player, Player.getSlotForHand(hand));

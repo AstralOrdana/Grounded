@@ -2,7 +2,6 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
       "bonus_rolls": 0,
       "entries": [
         {
@@ -10,22 +9,25 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "grounded:permafrost",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:silk_touch",
+                          "levels": {
+                            "min": 1
+                          }
                         }
-                      }
-                    ]
+                      ]
+                    }
                   }
                 }
-              ]
+              ],
+              "name": "grounded:permafrost",
+              "functions": []
             },
             {
               "type": "minecraft:alternatives",
@@ -46,7 +48,7 @@
                   "conditions": [
                     {
                       "condition": "minecraft:random_chance",
-                      "chance": 0.15
+                      "chance": 0.05
                     }
                   ]
                 },
@@ -56,7 +58,7 @@
                   "conditions": [
                     {
                       "condition": "minecraft:random_chance",
-                      "chance": 0.15
+                      "chance": 0.05
                     }
                   ]
                 },
@@ -73,7 +75,9 @@
             }
           ]
         }
-      ]
+      ],
+      "rolls": 1
     }
-  ]
+  ],
+  "random_sequence": "grounded:blocks/permafrost"
 }

@@ -2,7 +2,6 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
       "bonus_rolls": 0,
       "entries": [
         {
@@ -10,35 +9,39 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "grounded:grassy_silt",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:silk_touch",
+                          "levels": {
+                            "min": 1
+                          }
                         }
-                      }
-                    ]
+                      ]
+                    }
                   }
                 }
-              ]
+              ],
+              "name": "grounded:grassy_silt"
             },
             {
               "type": "minecraft:item",
-              "name": "grounded:silt",
               "conditions": [
                 {
                   "condition": "minecraft:survives_explosion"
                 }
-              ]
+              ],
+              "name": "grounded:silt"
             }
           ]
         }
-      ]
+      ],
+      "rolls": 1
     }
-  ]
+  ],
+  "random_sequence": "grounded:blocks/silt"
 }
