@@ -2,6 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
+      "rolls": 1,
       "bonus_rolls": 0,
       "entries": [
         {
@@ -9,6 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
+              "name": "grounded:grassy_permafrost",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -16,68 +18,42 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
+                          "enchantments": "minecraft:silk_touch"
                         }
                       ]
                     }
                   }
                 }
-              ],
-              "name": "grounded:grassy_permafrost",
-              "functions": []
+              ]
             },
             {
-              "type": "minecraft:alternatives",
-              "children": [
-                {
-                  "type": "minecraft:item",
-                  "name": "minecraft:bone",
-                  "conditions": [
-                    {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.25
-                    }
-                  ]
-                },
-                {
-                  "type": "minecraft:item",
-                  "name": "minecraft:gold_nugget",
-                  "conditions": [
-                    {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.05
-                    }
-                  ]
-                },
-                {
-                  "type": "minecraft:item",
-                  "name": "minecraft:iron_nugget",
-                  "conditions": [
-                    {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.05
-                    }
-                  ]
-                },
-                {
-                  "type": "minecraft:item",
-                  "name": "grounded:permafrost"
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "value": "grounded:blocks/permafrost_drops",
               "conditions": [
                 {
-                  "condition": "minecraft:survives_explosion"
+                  "chances": [
+                    0,
+                    0.1,
+                    0.25,
+                    1
+                  ],
+                  "condition": "minecraft:table_bonus",
+                  "enchantment": "minecraft:fortune"
                 }
               ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "grounded:permafrost"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
             }
           ]
         }
-      ],
-      "rolls": 1
+      ]
     }
-  ],
-  "random_sequence": "grounded:blocks/permafrost"
+  ]
 }

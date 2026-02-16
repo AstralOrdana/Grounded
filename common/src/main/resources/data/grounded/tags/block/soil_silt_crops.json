@@ -4,11 +4,11 @@
     "minecraft:potatoes",
     "minecraft:wheat",
     {
-      "id": "farmers_delight:cabbages",
+      "id": "farmersdelight:cabbages",
       "required": false
     },
     {
-      "id": "farmers_delight:onions",
+      "id": "farmersdelight:onions",
       "required": false
     },
     {

@@ -9,32 +9,29 @@
           "type": "minecraft:alternatives",
           "children": [
             {
-              "type": "minecraft:item",
-              "name": "grounded:permafrost_path",
+              "type": "minecraft:loot_table",
+              "value": "grounded:blocks/permafrost_drops",
               "conditions": [
                 {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
-                        }
-                      }
-                    ]
-                  }
+                  "chances": [
+                    0,
+                    0.1,
+                    0.25,
+                    1
+                  ],
+                  "condition": "minecraft:table_bonus",
+                  "enchantment": "minecraft:fortune"
                 }
               ]
             },
             {
               "type": "minecraft:item",
-              "name": "grounded:permafrost",
-              "conditions": [
-                {
-                  "condition": "minecraft:survives_explosion"
-                }
-              ]
+              "name": "grounded:permafrost"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
             }
           ]
         }

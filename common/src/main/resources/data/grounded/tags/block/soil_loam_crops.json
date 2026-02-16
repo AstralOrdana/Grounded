@@ -5,11 +5,11 @@
     "minecraft:pumpkin_stem",
     "minecraft:sweet_berry_bush",
     {
-      "id": "farmers_delight:budding_tomatoes",
+      "id": "farmersdelight:budding_tomatoes",
       "required": false
     },
     {
-      "id": "farmers_delight:tomatoes",
+      "id": "farmersdelight:tomatoes",
       "required": false
     }
   ]

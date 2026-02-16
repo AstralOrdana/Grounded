@@ -2,6 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
+      "rolls": 1,
       "bonus_rolls": 0,
       "entries": [
         {
@@ -9,6 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
+              "name": "grounded:grassy_sandy_dirt",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -16,32 +18,26 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
+                          "enchantments": "minecraft:silk_touch"
                         }
                       ]
                     }
                   }
                 }
-              ],
-              "name": "grounded:grassy_sandy_dirt"
+              ]
             },
             {
               "type": "minecraft:item",
+              "name": "grounded:sandy_dirt",
               "conditions": [
                 {
                   "condition": "minecraft:survives_explosion"
                 }
-              ],
-              "name": "grounded:sandy_dirt"
+              ]
             }
           ]
         }
-      ],
-      "rolls": 1
+      ]
     }
-  ],
-  "random_sequence": "grounded:blocks/sandy_dirt"
+  ]
 }

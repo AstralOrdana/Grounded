@@ -4,7 +4,7 @@
     "minecraft:carrots",
     "minecraft:beetroots",
     {
-      "id": "farmers_delight:cabbages",
+      "id": "farmersdelight:cabbages",
       "required": false
     }
   ]
