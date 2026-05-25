@@ -22,6 +22,23 @@ public class WeatheringHelper {
                     .put(Blocks.DIRT, Blocks.GRASS_BLOCK)
                     .build());
 
+    public static final Supplier<Map<Block, Block>> GRASSY_TO_SOIL = Suppliers.memoize(() ->
+            ImmutableMap.<Block, Block>builder()
+                    .put(ModBlocks.GRASSY_SANDY_DIRT.get(), ModBlocks.SANDY_DIRT.get())
+                    .put(ModBlocks.GRASSY_EARTHEN_CLAY.get(), ModBlocks.EARTHEN_CLAY.get())
+                    .put(ModBlocks.GRASSY_SILT.get(), ModBlocks.SILT.get())
+                    .put(ModBlocks.GRASSY_PERMAFROST.get(), ModBlocks.PERMAFROST.get())
+                    .put(Blocks.GRASS_BLOCK, Blocks.DIRT)
+                    .build());
+
+    static Optional<Block> getSoilFromGrass(Block block) {
+        return Optional.ofNullable(GRASSY_TO_SOIL.get().get(block));
+    }
+
+    public static Optional<BlockState> getSoilFromGrass(BlockState state) {
+        return getSoilFromGrass(state.getBlock()).map(block -> block.withPropertiesOf(state));
+    }
+
     static Optional<Block> getGrassySoil(Block block) {
         return Optional.ofNullable(SOIL_TO_GRASSY.get().get(block));
     }

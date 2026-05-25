@@ -1,5 +1,4 @@
 {
-  "replace": false,
   "values": [
     "grounded:mulch_block",
     "grounded:loam",
@@ -7,7 +6,6 @@
     "grounded:earthen_clay",
     "grounded:sandy_dirt",
     "grounded:permafrost",
-
     "grounded:grassy_silt",
     "grounded:grassy_earthen_clay",
     "grounded:grassy_sandy_dirt",

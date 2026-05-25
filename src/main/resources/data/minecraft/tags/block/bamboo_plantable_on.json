@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "grounded:loamy_farmland",
-    "grounded:sandy_farmland",
-    "grounded:silty_farmland",
-    "grounded:earthen_clay_farmland"
-  ]
-}

@@ -34,12 +34,23 @@ public class BlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(ModTags.SILT_SOIL_CROP).add(Blocks.POTATOES, Blocks.WHEAT);
         builder(ModTags.SILT_SOIL_CROP).addOptional(of("farmersdelight:cabbages")).addOptional(of("farmersdelight:flax")).addOptional(of("farmersdelight:onions"));
 
+        ResourceKey[] DIRT_BLOCKS = {ModBlocks.MULCH_BLOCK.id(), ModBlocks.LOAM.id(), ModBlocks.SILT.id(), ModBlocks.EARTHEN_CLAY.id(), ModBlocks.SANDY_DIRT.id(), ModBlocks.PERMAFROST.id()};
+        ResourceKey[] GRASS_BLOCKS = {ModBlocks.GRASSY_SILT.id(), ModBlocks.GRASSY_EARTHEN_CLAY.id(), ModBlocks.GRASSY_SANDY_DIRT.id(), ModBlocks.GRASSY_PERMAFROST.id()};
 
         builder(BlockTags.SUPPORTS_CROPS).forceAddTag(ModTags.FARMLANDS);
         builder(BlockTags.GROWS_CROPS).forceAddTag(ModTags.FARMLANDS);
         builder(BlockTags.SUPPORTS_STEM_CROPS).forceAddTag(ModTags.FARMLANDS);
         builder(BlockTags.SUPPORTS_STEM_FRUIT).forceAddTag(ModTags.FARMLANDS);
         builder(BlockTags.SUPPORTS_VEGETATION).forceAddTag(ModTags.FARMLANDS);
+        builder(BlockTags.ANIMALS_SPAWNABLE_ON).add(DIRT_BLOCKS).add(GRASS_BLOCKS);
+        builder(BlockTags.GOATS_SPAWNABLE_ON).add(DIRT_BLOCKS).add(GRASS_BLOCKS);
+        builder(BlockTags.FOXES_SPAWNABLE_ON).add(DIRT_BLOCKS).add(GRASS_BLOCKS);
+        builder(BlockTags.RABBITS_SPAWNABLE_ON).add(DIRT_BLOCKS).add(GRASS_BLOCKS);
+        builder(BlockTags.WOLVES_SPAWNABLE_ON).add(DIRT_BLOCKS).add(GRASS_BLOCKS);
+        builder(BlockTags.SUPPORTS_BAMBOO).add(ModBlocks.EARTHEN_CLAY_FARMLAND.id(), ModBlocks.LOAMY_FARMLAND.id(), ModBlocks.SANDY_FARMLAND.id(), ModBlocks.SILTY_FARMLAND.id());
+        builder(BlockTags.DIRT).add(DIRT_BLOCKS);
+        builder(BlockTags.GRASS_BLOCKS).add(GRASS_BLOCKS);
+        builder(BlockTags.OVERRIDES_MUSHROOM_LIGHT_REQUIREMENT).add(ModBlocks.MULCH_BLOCK.id(), ModBlocks.NULCH_BLOCK.id());
     }
 
     private ResourceKey<Block> of(String s) {
