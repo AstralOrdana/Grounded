@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S",
+    "S#"
+  ],
+  "key": {
+    "#": "minecraft:gravel",
+    "S": "grounded:silt"
+  },
+  "result": {
+    "id": "grounded:coarse_silt",
+    "count": 4
+  }
+}

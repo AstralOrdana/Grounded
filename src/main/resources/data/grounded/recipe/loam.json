@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AC",
+    "SD"
+  ],
+  "key": {
+    "A": [
+      "#minecraft:sand",
+      "grounded:sandy_dirt"
+    ],
+    "C": [
+      "minecraft:clay",
+      "grounded:earthen_clay"
+    ],
+    "S": [
+      "grounded:silt",
+      "minecraft:mud"
+    ],
+    "D": "minecraft:dirt"
+  },
+  "result": {
+    "id": "grounded:loam",
+    "count": 4
+  }
+}

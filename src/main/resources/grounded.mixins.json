@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.ordana.grounded.mixins",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+  ],
+  "mixins": [
+    "GrassBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

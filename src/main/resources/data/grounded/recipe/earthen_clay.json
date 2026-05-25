@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S",
+    "S#"
+  ],
+  "key": {
+    "#": "minecraft:terracotta",
+    "S": "minecraft:dirt"
+  },
+  "result": {
+    "id": "grounded:earthen_clay",
+    "count": 4
+  }
+}

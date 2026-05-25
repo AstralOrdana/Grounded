@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S",
+    "S#"
+  ],
+  "key": {
+    "#": "minecraft:gravel",
+    "S": "grounded:sandy_dirt"
+  },
+  "result": {
+    "id": "grounded:coarse_sandy_dirt",
+    "count": 4
+  }
+}

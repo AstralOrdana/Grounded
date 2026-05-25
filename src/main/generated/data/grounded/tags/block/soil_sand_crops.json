@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:carrots",
+    "minecraft:beetroots",
+    {
+      "id": "farmersdelight:cabbages",
+      "required": false
+    }
+  ]
+}

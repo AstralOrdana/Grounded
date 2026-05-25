@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C#",
+    "#C"
+  ],
+  "key": {
+    "#": "minecraft:mud",
+    "C": "minecraft:dirt"
+  },
+  "result": {
+    "id": "grounded:mulch_block",
+    "count": 4
+  }
+}
