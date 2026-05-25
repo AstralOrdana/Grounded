@@ -15,7 +15,7 @@ public class GroundedClient {
 
     public static void registerBlockColors(PlatformSpecific.BlockColorEvent event) {
 
-        event.register(List.of(BlockTintSources.grassBlock(), c->-1),
+        event.register(List.of(BlockTintSources.grassBlock()),
                 ModBlocks.GRASSY_PERMAFROST.get(),
                 ModBlocks.GRASSY_SILT.get(),
                 ModBlocks.GRASSY_EARTHEN_CLAY.get(),

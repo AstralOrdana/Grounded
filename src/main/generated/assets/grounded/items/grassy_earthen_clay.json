@@ -1,6 +1,13 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "grounded:block/grassy_earthen_clay"
+    "model": "grounded:block/grassy_earthen_clay",
+    "tints": [
+      {
+        "type": "minecraft:grass",
+        "downfall": 1.0,
+        "temperature": 0.5
+      }
+    ]
   }
 }
