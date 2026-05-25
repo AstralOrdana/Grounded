@@ -1,3 +1,4 @@
+//? fabric {
 package com.ordana.grounded.fabric.data.provider;
 
 import com.ordana.grounded.reg.ModBlocks;
@@ -34,3 +35,4 @@ public class ModelProvider extends FabricModelProvider {
 
     }
 }
+//?}

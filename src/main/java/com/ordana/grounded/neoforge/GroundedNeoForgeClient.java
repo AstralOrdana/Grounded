@@ -3,21 +3,14 @@
 
 import com.ordana.grounded.Grounded;
 import com.ordana.grounded.GroundedClient;
-import net.minecraft.core.registries.Registries;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.registries.RegisterEvent;
 
+@Mod(Grounded.MOD_ID)
 @EventBusSubscriber(modid = Grounded.MOD_ID)
-public class GroundedNeoForge {
-
-    @SubscribeEvent
-    public static void register(RegisterEvent event) {
-        if (event.getRegistryKey().equals(Registries.BLOCK)) {
-            Grounded.commonInit();
-        }
-    }
+public class GroundedNeoForgeClient {
 
     @SubscribeEvent
     public static void registerColorHandlers(RegisterColorHandlersEvent.BlockTintSources event) {

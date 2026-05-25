@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
 public class GroundedFabricClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        GroundedClient.init();
         GroundedClient.registerBlockColors(BlockColorRegistry::register);
     }
 }

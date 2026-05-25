@@ -8,10 +8,6 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.List;
 
 public class GroundedClient {
-    
-    public static void init() {
-
-    }
 
     public static void registerBlockColors(PlatformSpecific.BlockColorEvent event) {
 
@@ -21,20 +17,5 @@ public class GroundedClient {
                 ModBlocks.GRASSY_EARTHEN_CLAY.get(),
                 ModBlocks.GRASSY_SANDY_DIRT.get());
     }
-
-        /*
-    private static void registerItemColors(ClientHelper.ItemColorEvent event) {
-
-
-        event.register((itemStack, i) -> event.getColor(Items.GRASS_BLOCK.getDefaultInstance(), i),
-                ModBlocks.GRASSY_SILT.get(),
-                ModBlocks.GRASSY_PERMAFROST.get(),
-                ModBlocks.GRASSY_SANDY_DIRT.get(),
-                ModBlocks.GRASSY_EARTHEN_CLAY.get());
-
-
-    }
-
-         */
 
 }
