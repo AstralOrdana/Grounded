@@ -17,11 +17,14 @@ import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 
+import java.util.ArrayList;
 import java.util.function.Function;
 import java.util.function.ToIntFunction;
 
 @SuppressWarnings("unused")
 public class ModBlocks {
+
+    public static ArrayList<RegSupplier<Block>> BLOCKS = new ArrayList<>();
 
     public static void init() {
     }
@@ -47,7 +50,9 @@ public class ModBlocks {
             Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
         }
 
-        return new RegSupplier<>(blockKey, Registry.register(BuiltInRegistries.BLOCK, blockKey, block));
+        var r = new RegSupplier<>(blockKey, Registry.register(BuiltInRegistries.BLOCK, blockKey, block));
+        BLOCKS.add(r);
+        return r;
     }
 
     private static ResourceKey<Block> keyOfBlock(String name) {
