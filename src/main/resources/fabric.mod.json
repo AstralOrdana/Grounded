@@ -13,11 +13,11 @@
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/grounded",
-    "sources": "https://github.com/AstralOrdana/grounded",
-    "issues": "https://github.com/AstralOrdana/grounded/issues"
+    "sources": "https://github.com/Silversmith-Mods/grounded",
+    "issues": "https://github.com/Silversmith-Mods/grounded/issues"
   },
   "license": "LGPLv3",
-  "icon": "icon.gif",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [

@@ -12,7 +12,7 @@ credits="Ordana, cassiancc" #optional
 description = '''
 New soil variants to spice up your world
 '''
-logoFile = "icon.gif"
+logoFile = "icon.png"
 
 [[dependencies.grounded]]
 modId = "neoforge"
