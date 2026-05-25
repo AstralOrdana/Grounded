@@ -49,7 +49,8 @@ public class BlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         builder(BlockTags.WOLVES_SPAWNABLE_ON).add(DIRT_BLOCKS).add(GRASS_BLOCKS);
         builder(BlockTags.SUPPORTS_BAMBOO).add(ModBlocks.EARTHEN_CLAY_FARMLAND.id(), ModBlocks.LOAMY_FARMLAND.id(), ModBlocks.SANDY_FARMLAND.id(), ModBlocks.SILTY_FARMLAND.id());
         builder(BlockTags.DIRT).add(DIRT_BLOCKS);
-        builder(BlockTags.GRASS_BLOCKS).add(GRASS_BLOCKS);
+        builder(ModTags.GRASSY_BLOCKS).add(GRASS_BLOCKS);
+        builder(BlockTags.GRASS_BLOCKS).addTag(ModTags.GRASSY_BLOCKS);
         builder(BlockTags.OVERRIDES_MUSHROOM_LIGHT_REQUIREMENT).add(ModBlocks.MULCH_BLOCK.id(), ModBlocks.NULCH_BLOCK.id());
     }
 
