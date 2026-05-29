@@ -121,7 +121,7 @@ public class EarthenClayFarmlandBlock extends ModFarmlandBlock {
             else if (stack.is(Items.BUCKET) && state.getValue(MOISTURE) > 0) {
                 level.playSound(player, pos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0f, 1.0f);
                 if (player instanceof ServerPlayer) {
-                    ItemStack itemStack2 = ItemUtils.createFilledResult(stack, player, Items.LAVA_BUCKET.getDefaultInstance());
+                    ItemStack itemStack2 = ItemUtils.createFilledResult(stack, player, Items.WATER_BUCKET.getDefaultInstance());
                     player.setItemInHand(hand, itemStack2);
                     level.setBlockAndUpdate(pos, state.setValue(MOISTURE, 0));
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
