@@ -1,5 +1,5 @@
 {
-  "type": "neoforge:add_features",
+  "type": "lithostitched:add_features",
   "biomes": "#minecraft:is_overworld",
   "features": [
     "grounded:silt_aquifer"

@@ -2,7 +2,6 @@ package com.ordana.grounded;
 
 import com.ordana.grounded.reg.ModBlocks;
 import com.ordana.grounded.reg.ModCreativeTab;
-import com.ordana.grounded.reg.ModWorldgen;
 import net.minecraft.resources.Identifier;
 
 public class Grounded {
@@ -16,7 +15,6 @@ public class Grounded {
     public static void commonInit() {
         ModCreativeTab.init();
         ModBlocks.init();
-        ModWorldgen.init();
     }
 
 }

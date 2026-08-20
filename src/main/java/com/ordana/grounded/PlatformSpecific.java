@@ -1,9 +1,5 @@
 package com.ordana.grounded;
 
-//? neoforge
-//import com.ordana.grounded.neoforge.PlatformSpecificImpl;
-//? fabric
-import com.ordana.grounded.fabric.PlatformSpecificImpl;
 import net.minecraft.client.color.block.BlockTintSource;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
@@ -19,11 +15,6 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public interface PlatformSpecific {
-    PlatformSpecific INSTANCE = new PlatformSpecificImpl();
-
-    default void addFeatureToBiome(GenerationStep.Decoration step, TagKey<Biome> tagKey, ResourceKey<PlacedFeature> feature) {
-
-    }
 
     interface ItemToTabEvent {
         void addAfter(ResourceKey<CreativeModeTab> tab, ItemStack target, ItemLike[] entries);

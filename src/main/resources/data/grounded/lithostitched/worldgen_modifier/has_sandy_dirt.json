@@ -1,5 +1,5 @@
 {
-  "type": "neoforge:add_features",
+  "type": "lithostitched:add_features",
   "biomes": "#grounded:has_sandy_dirt",
   "features": [
     "grounded:sandy_dirt"
