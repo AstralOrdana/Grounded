@@ -33,6 +33,7 @@ public class BlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         builder(ModTags.SAND_SOIL_CROP).addOptional(of("farmersdelight:cabbages"));
         valueLookupBuilder(ModTags.SILT_SOIL_CROP).add(Blocks.POTATOES, Blocks.WHEAT);
         builder(ModTags.SILT_SOIL_CROP).addOptional(of("farmersdelight:cabbages")).addOptional(of("farmersdelight:flax")).addOptional(of("farmersdelight:onions"));
+		valueLookupBuilder(ModTags.OOZE_CROPS).add(Blocks.KELP, Blocks.KELP_PLANT);
 
         ResourceKey[] DIRT_BLOCKS = {ModBlocks.MULCH_BLOCK.id(), ModBlocks.LOAM.id(), ModBlocks.SILT.id(), ModBlocks.EARTHEN_CLAY.id(), ModBlocks.SANDY_DIRT.id(), ModBlocks.PERMAFROST.id()};
         ResourceKey[] GRASS_BLOCKS = {ModBlocks.GRASSY_SILT.id(), ModBlocks.GRASSY_EARTHEN_CLAY.id(), ModBlocks.GRASSY_SANDY_DIRT.id(), ModBlocks.GRASSY_PERMAFROST.id()};

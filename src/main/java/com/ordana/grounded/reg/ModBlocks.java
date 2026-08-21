@@ -5,7 +5,6 @@ import com.ordana.grounded.blocks.*;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -124,4 +123,6 @@ public class ModBlocks {
     public static final RegSupplier<Block> LOAMY_FARMLAND = regWithItem("loamy_farmland", (p) ->
             new LoamyFarmlandBlock(p), Properties.ofFullCopy(Blocks.DIRT).strength(0.6f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN));
 
+	public static final RegSupplier<Block> OOZE = regWithItem("ooze", (p) ->
+			new OozeBlock(p), Properties.ofFullCopy(Blocks.DIRT).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).speedFactor(0.8F).randomTicks());
 }

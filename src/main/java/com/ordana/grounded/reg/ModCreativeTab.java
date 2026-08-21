@@ -20,7 +20,8 @@ public class ModCreativeTab {
 
         after(e, Items.ROOTED_DIRT, CreativeModeTabs.NATURAL_BLOCKS,
                 ModBlocks.EARTHEN_CLAY, ModBlocks.SANDY_DIRT, ModBlocks.SILT, ModBlocks.PERMAFROST,
-                ModBlocks.GRASSY_EARTHEN_CLAY, ModBlocks.GRASSY_SANDY_DIRT, ModBlocks.GRASSY_SILT, ModBlocks.GRASSY_PERMAFROST
+                ModBlocks.GRASSY_EARTHEN_CLAY, ModBlocks.GRASSY_SANDY_DIRT, ModBlocks.GRASSY_SILT, ModBlocks.GRASSY_PERMAFROST,
+				ModBlocks.OOZE
         );
 
         after(e, Items.FARMLAND, CreativeModeTabs.NATURAL_BLOCKS,

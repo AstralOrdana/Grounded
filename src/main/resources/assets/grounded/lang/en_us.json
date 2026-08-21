@@ -28,5 +28,7 @@
   "block.grounded.loamy_farmland": "Loamy Farmland",
 
   "block.grounded.mulch_block": "Mulch",
-  "block.grounded.nulch_block": "Nulch"
+  "block.grounded.nulch_block": "Nulch",
+
+  "block.grounded.ooze": "Ooze"
 }

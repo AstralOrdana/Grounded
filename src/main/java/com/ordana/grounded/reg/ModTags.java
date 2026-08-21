@@ -14,6 +14,7 @@ public class ModTags {
     public static final TagKey<Block> SILT_SOIL_CROP = registerBlockTag("soil_silt_crops");
     public static final TagKey<Block> SAND_SOIL_CROP = registerBlockTag("soil_sand_crops");
     public static final TagKey<Block> LOAM_SOIL_CROP = registerBlockTag("soil_loam_crops");
+	public static final TagKey<Block> OOZE_CROPS = registerBlockTag("ooze_crops");
     public static final TagKey<Block> GRASSY_BLOCKS = registerBlockTag("grassy_blocks");
     public static final TagKey<Block> FARMLANDS = registerBlockTag("farmlands");
 
