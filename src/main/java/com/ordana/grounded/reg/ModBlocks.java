@@ -124,5 +124,5 @@ public class ModBlocks {
             new LoamyFarmlandBlock(p), Properties.ofFullCopy(Blocks.DIRT).strength(0.6f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN));
 
 	public static final RegSupplier<Block> OOZE = regWithItem("ooze", (p) ->
-			new OozeBlock(p), Properties.ofFullCopy(Blocks.DIRT).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE).speedFactor(0.8F).randomTicks());
+			new OozeBlock(p), Properties.ofFullCopy(Blocks.DIRT).mapColor(MapColor.SAND).sound(SoundType.MUD).speedFactor(0.8F).randomTicks());
 }
