@@ -125,4 +125,16 @@ public class ModBlocks {
 
 	public static final RegSupplier<Block> OOZE = regWithItem("ooze", (p) ->
 			new OozeBlock(p), Properties.ofFullCopy(Blocks.DIRT).mapColor(MapColor.SAND).sound(SoundType.MUD).speedFactor(0.8F).randomTicks());
+	public static final RegSupplier<Block> DETRITUS = regWithItem(
+		"detritus",
+		DetritusBlock::new,
+		Properties.ofFullCopy(Blocks.DIRT)
+			.mapColor(MapColor.SNOW)
+			.sound(SoundType.MUD)
+			.speedFactor(0.8F)
+			.randomTicks()
+			.replaceable()
+			.isViewBlocking((statex, level, pos) -> statex.getValue(DetritusBlock.LAYERS) >= DetritusBlock.MAX_LAYERS)
+	);
+
 }

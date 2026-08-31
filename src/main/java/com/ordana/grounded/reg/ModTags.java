@@ -18,7 +18,7 @@ public class ModTags {
     public static final TagKey<Block> GRASSY_BLOCKS = registerBlockTag("grassy_blocks");
     public static final TagKey<Block> FARMLANDS = registerBlockTag("farmlands");
 
-    private static TagKey<Block> registerBlockTag(String id) {
+	private static TagKey<Block> registerBlockTag(String id) {
         return TagKey.create(Registries.BLOCK, Grounded.res(id));
     }
 
