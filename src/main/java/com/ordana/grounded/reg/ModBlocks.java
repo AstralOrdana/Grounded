@@ -5,7 +5,6 @@ import com.ordana.grounded.blocks.*;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -123,5 +122,19 @@ public class ModBlocks {
             new LoamBlock(p), Properties.ofFullCopy(Blocks.DIRT).strength(0.5f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN));
     public static final RegSupplier<Block> LOAMY_FARMLAND = regWithItem("loamy_farmland", (p) ->
             new LoamyFarmlandBlock(p), Properties.ofFullCopy(Blocks.DIRT).strength(0.6f).sound(SoundType.GRAVEL).mapColor(MapColor.TERRACOTTA_BROWN));
+
+	public static final RegSupplier<Block> OOZE = regWithItem("ooze", (p) ->
+			new OozeBlock(p), Properties.ofFullCopy(Blocks.DIRT).mapColor(MapColor.SAND).sound(SoundType.MUD).speedFactor(0.8F).randomTicks());
+	public static final RegSupplier<Block> DETRITUS = regWithItem(
+		"detritus",
+		DetritusBlock::new,
+		Properties.ofFullCopy(Blocks.DIRT)
+			.mapColor(MapColor.SNOW)
+			.sound(SoundType.MUD)
+			.speedFactor(0.8F)
+			.randomTicks()
+			.replaceable()
+			.isViewBlocking((statex, level, pos) -> statex.getValue(DetritusBlock.LAYERS) >= DetritusBlock.MAX_LAYERS)
+	);
 
 }

@@ -48,7 +48,7 @@ public class EarthenClayBlockGrassy extends BaseSoilBlock implements SimpleWater
         stateManager.add(WATERLOGGED).add(SNOWY);
     }
 
-    @Nullable
+	@Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
         boolean bl = fluidState.getType() == Fluids.WATER;
@@ -63,6 +63,7 @@ public class EarthenClayBlockGrassy extends BaseSoilBlock implements SimpleWater
         return super.updateShape(state, level, ticks, currentPos, directionToNeighbour, neighbourPos, neighbourState, random);
     }
 
+	@Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
