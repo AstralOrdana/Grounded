@@ -40,9 +40,10 @@ public class Grounded {
         });
     }
 
-	private static SurfaceRules.RuleSource makeRules(RegistryAccess registries) {
+    private static SurfaceRules.RuleSource makeRules(RegistryAccess registries) {
         return SurfaceRules.sequence(
-                getRuleSource(registries, ModTags.HAS_EARTHEN_CLAY, ModBlocks.EARTHEN_CLAY, ModBlocks.GRASSY_EARTHEN_CLAY)
+                getRuleSource(registries, ModTags.HAS_EARTHEN_CLAY, ModBlocks.EARTHEN_CLAY, ModBlocks.GRASSY_EARTHEN_CLAY),
+                getRuleSource(registries, ModTags.HAS_PERMAFROST, ModBlocks.PERMAFROST, ModBlocks.GRASSY_PERMAFROST)
         );
     }
 
